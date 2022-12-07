@@ -87,7 +87,7 @@ function winner_finder(symbol) {
 }
 ```
 
-The ```winner_finder_component(symbol)``` is a function that contains
+The ```document.getElementById('winner-container').style.visibility = 'visible'``` makes the div element called winner-contianer visible after one of the symbols win and the ```winner_finder_component(symbol)``` is a function that contains
 
 ```
 function winner_finder_component(symbol) {
@@ -109,6 +109,8 @@ function winner_finder_component(symbol) {
     }
 }
 ```
+
+The ```document.getElementById('winner-container-item').innerHTML = 'You lose'``` change the content of an element content "You won" if X won and "You lose" if you lose to O. The ```board = null``` makes the objects null so the bot can never picked again if one of the symbol's won. ```let rs = document.getElementsByClassName('grid-item')``` get every grid items and the for loop removes every onclick attribute is someone win's.
 
 
 
