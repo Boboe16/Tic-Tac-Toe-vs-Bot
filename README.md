@@ -11,3 +11,18 @@ In single player there's a grid that contains 9 items, each items contains 3 att
     <h1 id="1"></h1>
 </div>
 ```
+
+The ```onclick="user(1)"``` is connected to a function called user(number).
+
+```
+function user(number) {
+    if (number == number) {
+        document.getElementById(number).innerHTML = 'X'
+        document.getElementById('grid-item-' + number).removeAttribute('onclick')
+        delete board[`space_${number}`]
+        winner_finder('X')
+        draw_finder()
+    }
+    bot()
+}
+```
