@@ -3,8 +3,6 @@ Tic-Tac-Toe is a game in which two players seek in alternate turns to complete a
 
 The project is still incomplete, I plan on adding 'O' as the player feature on single player.
 
-</br>
-
 <h2>Single Player</h2>
 
 In single player there's a grid that contains 9 items, each items contains 3 attribute ```onclick(onclick goes user(1) until user(9))```, ```id ```, ``` class``` and a 1 element h1.
