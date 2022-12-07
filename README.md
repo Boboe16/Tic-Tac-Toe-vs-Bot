@@ -161,5 +161,128 @@ let board = {
 }
 ```
 
+If the user clicked on one of the grid's item, one of the board's item will be remove so the ```bot()``` can never pick them. After that the ```bot()``` function will start.
+
+```
+function bot() {
+
+    function getRandomProperty(board) {
+
+        let keys = Object.keys(board);
+
+        return keys[Math.floor(Math.random() * keys.length)];
+    }
+
+    let tae = getRandomProperty(board)
+
+        if (tae == 'space_1') {
+            if (document.getElementById('1').innerText == 'X') {
+                bot_component()
+                return
+            }
+            board.space_1.innerHTML = 'O'
+            delete board.space_1   
+            document.getElementById('grid-item-1').removeAttribute('onclick')
+            winner_finder('O')   
+        }
+    
+        else if (tae == 'space_2') {
+            if (document.getElementById('2').innerText == 'X') {
+                bot_component()
+                return
+            }
+            board.space_2.innerHTML = 'O'
+            delete board.space_2    
+            document.getElementById('grid-item-2').removeAttribute('onclick')   
+            winner_finder('O')
+        }
+    
+        else if (tae == 'space_3') {
+            if (document.getElementById('3').innerText == 'X') {
+                bot_component()
+                return
+            }
+            board.space_3.innerHTML = 'O'
+            delete board.space_3
+            document.getElementById('grid-item-3').removeAttribute('onclick')
+            winner_finder('O')
+        }
+        
+        else if (tae == 'space_4') {
+            if (document.getElementById('4').innerText == 'X') {
+                bot_component()
+                return
+            }
+            board.space_4.innerHTML = 'O'
+            delete board.space_4
+            document.getElementById('grid-item-4').removeAttribute('onclick')
+            winner_finder('O')
+        }
+    
+        else if (tae == 'space_5') {
+            if (document.getElementById('5').innerText == 'X') {
+                bot_component()
+                return
+            }
+            board.space_5.innerHTML = 'O'
+            delete board.space_5
+            document.getElementById('grid-item-5').removeAttribute('onclick')
+            winner_finder('O')
+        }
+    
+        else if (tae == 'space_6') {
+            if (document.getElementById('6').innerText == 'X') {
+                bot_component()
+                return
+            }
+            board.space_6.innerHTML = 'O'
+            delete board.space_6 
+            document.getElementById('grid-item-6').removeAttribute('onclick')
+            winner_finder('O')
+        }
+        else if (tae == 'space_7') {
+            if (document.getElementById('7').innerText == 'X') {
+                bot_component()
+                return
+            }
+            board.space_7.innerHTML = 'O'
+            delete board.space_7     
+            document.getElementById('grid-item-7').removeAttribute('onclick')
+            winner_finder('O')   
+        }
+        else if (tae == 'space_8') {
+            if (document.getElementById('8').innerText == 'X') {
+                bot_component()
+                return
+            }
+            board.space_8.innerHTML = 'O'
+            delete board.space_8
+            document.getElementById('grid-item-8').removeAttribute('onclick')
+            winner_finder('O')
+        }
+        else if (tae == 'space_9') {  
+            if (document.getElementById('9').innerText == 'X') {
+                bot_component()
+                return
+            }        
+            board.space_9.innerHTML = 'O'
+            delete board.space_9
+            document.getElementById('grid-item-9').removeAttribute('onclick')
+            winner_finder('O')
+        }
+}
+```
+
+The ```getRandomProperty(board)``` make a randomizer that will pick an item in the object called board. The ```let tae = getRandomProperty(board)``` eats the function.
+```
+function getRandomProperty(board) {
+
+    let keys = Object.keys(board);
+
+    return keys[Math.floor(Math.random() * keys.length)];
+}
+
+let tae = getRandomProperty(board)
+```
 
 
