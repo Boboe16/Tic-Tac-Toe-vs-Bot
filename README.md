@@ -4,6 +4,10 @@ Tic-Tac-Toe is a game in which two players seek in alternate turns to complete a
 
 <h2>Single Player</h2>
 
-In single player there's a grid that contains 9 items, each items contains 3 attribute ```onclick```, ```id ```, ``` class``` 
+In single player there's a grid that contains 9 items, each items contains 3 attribute ```onclick```, ```id ```, ``` class``` and a 1 element h1.
 
+```
+<div class="grid-item" id="grid-item-1" onclick="user(1)">
+    <h1 id="1"></h1>
+</div>
 ```
