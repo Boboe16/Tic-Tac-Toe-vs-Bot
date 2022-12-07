@@ -27,7 +27,7 @@ function user(number) {
 }
 ```
 
-Each click, the grid item's content will have 'X' and remove one of the attribute so it can never be clicked again.
+Each click, the grid item's content(h1) will have 'X' and remove one of the attribute so it can never be clicked again.
 
 ```
 document.getElementById(number).innerHTML = 'X'
@@ -38,3 +38,55 @@ It will also delete one of the object's item which is connected to bot's move an
 ```
 delete board[`space_${number}`]
 ```
+
+The ```winner_finder('X')``` is a function that finds the winnder. xD
+
+```
+function winner_finder(symbol) {
+    // Winner Horizontal
+
+    if (document.getElementById('1').innerText == symbol && document.getElementById('2').innerText == symbol && document.getElementById('3').innerText == symbol) {
+        winner_finder_component(symbol)
+        document.getElementById('winner-container').style.visibility = 'visible'
+    }
+
+    else if (document.getElementById('4').innerText == symbol && document.getElementById('5').innerText == symbol && document.getElementById('6').innerText == symbol) {
+        winner_finder_component(symbol)
+        document.getElementById('winner-container').style.visibility = 'visible'
+    }
+    else if (document.getElementById('7').innerText == symbol && document.getElementById('8').innerText == symbol && document.getElementById('9').innerText == symbol) {
+        winner_finder_component(symbol)
+        document.getElementById('winner-container').style.visibility = 'visible'
+    }
+
+    // Winner Vertical 
+
+    else if (document.getElementById('1').innerText == symbol && document.getElementById('4').innerText == symbol && document.getElementById('7').innerText == symbol) {
+        winner_finder_component(symbol)
+        document.getElementById('winner-container').style.visibility = 'visible'
+    }
+    else if (document.getElementById('2').innerText == symbol && document.getElementById('5').innerText == symbol && document.getElementById('8').innerText == symbol) {
+        winner_finder_component(symbol)
+        document.getElementById('winner-container').style.visibility = 'visible'
+    }
+    else if (document.getElementById('3').innerText == symbol && document.getElementById('6').innerText == symbol && document.getElementById('9').innerText == symbol) {
+        winner_finder_component(symbol)
+        document.getElementById('winner-container').style.visibility = 'visible'
+    }
+
+    // Winner Diagonal
+
+    else if (document.getElementById('1').innerText == symbol && document.getElementById('5').innerText == symbol && document.getElementById('9').innerText == symbol) {
+        winner_finder_component(symbol)
+        document.getElementById('winner-container').style.visibility = 'visible'
+    } 
+    else if (document.getElementById('3').innerText == symbol && document.getElementById('5').innerText == symbol && document.getElementById('7').innerText == symbol) {
+        winner_finder_component(symbol)
+        document.getElementById('winner-container').style.visibility = 'visible'
+    }
+}
+```
+
+
+
+
