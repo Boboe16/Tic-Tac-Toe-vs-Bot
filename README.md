@@ -117,5 +117,49 @@ The ```board = null``` makes the objects null so the bot can never picked again 
 ```let rs = document.getElementsByClassName('grid-item')``` get every grid items and the for loop removes every onclick attribute is someone win's.
 
 
+Now let's get back into the user(number) function.
+
+```
+function user(number) {
+    if (number == number) {
+        document.getElementById(number).innerHTML = 'X'
+        document.getElementById('grid-item-' + number).removeAttribute('onclick')
+        delete board[`space_${number}`]
+        winner_finder('X')
+        draw_finder()
+    }
+    bot()
+}
+```
+
+The draw_finder() function contains
+
+```
+function board_keys(board) {
+    return Object.keys(board)
+}
+
+function draw_finder() {
+    if (board_keys(board).length == 0) {
+        document.getElementById('winner-container-item').innerHTML = 'Draw'
+        document.getElementById('winner-container').style. visibility = 'visible'
+    }
+}
+```
+
+The ```board_keys(board)``` returns the object's properties like a list. Example {tae,ihe,boboe}.
+
+draw_finder(). if board's length is 0 its draw.
+
+The last one in ```user(number)``` function called ```bot()``` is dependent on the object called ```board``` that contains
+
+```
+let board = {
+    space_1: document.getElementById('1'),space_2: document.getElementById('2'),space_3: document.getElementById('3'),
+    space_4: document.getElementById('4'),space_5: document.getElementById('5'),space_6: document.getElementById('6'),
+    space_7: document.getElementById('7'),space_8: document.getElementById('8'),space_9: document.getElementById('9')
+}
+```
+
 
 
