@@ -26,3 +26,10 @@ function user(number) {
     bot()
 }
 ```
+
+Each click, the grid item's content will have 'X' and remove one of the attribute so it can never be clicked again.
+
+```
+document.getElementById(number).innerHTML = 'X'
+document.getElementById('grid-item-' + number).removeAttribute('onclick')
+```
