@@ -274,6 +274,7 @@ function bot() {
 ```
 
 The ```getRandomProperty(board)``` make a randomizer that will pick an item in the object called board. The ```let tae = getRandomProperty(board)``` eats the function.
+
 ```
 function getRandomProperty(board) {
 
@@ -285,4 +286,26 @@ function getRandomProperty(board) {
 let tae = getRandomProperty(board)
 ```
 
+Next is about the if else conditional statements.
+
+```
+if (tae == 'space_1') {
+    if (document.getElementById('1').innerText == 'X') {
+        bot_component()
+        return
+    }
+    board.space_1.innerHTML = 'O'
+    delete board.space_1   
+    document.getElementById('grid-item-1').removeAttribute('onclick')
+    winner_finder('O')   
+}
+```
+
+The ```if (document.getElementById('1').innerText == 'X') {``` executes if 'X' is already on the grid item, anyway ```bot_component()``` returns a function just like ```bot()``` so it will be randomize again.
+
+```board.space_1.innerHTML = 'O'``` grid's item h1 into 'O'. ``` delete board.space_1``` removes one of the board's item so it never pick it again.
+
+```document.getElementById('grid-item-1').removeAttribute('onclick')``` removes the onclick attribute so the user or you can never pick it again.
+
+```winner_finder('O')``` works the same as how it works on the ```user(number)``` function.
 
