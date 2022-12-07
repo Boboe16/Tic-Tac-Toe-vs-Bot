@@ -33,3 +33,8 @@ Each click, the grid item's content will have 'X' and remove one of the attribut
 document.getElementById(number).innerHTML = 'X'
 document.getElementById('grid-item-' + number).removeAttribute('onclick')
 ```
+
+It will also delete one of the object's item which is connected to bot's move and win, draw stuff.
+```
+delete board[`space_${number}`]
+```
