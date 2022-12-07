@@ -87,6 +87,29 @@ function winner_finder(symbol) {
 }
 ```
 
+The ```winner_finder_component(symbol)``` is a function that contains
+
+```
+function winner_finder_component(symbol) {
+    if (symbol == 'O') {
+        document.getElementById('winner-container-item').innerHTML = 'You lose'
+        board = null
+        let rs = document.getElementsByClassName('grid-item')
+        for(var i = 0; i < rs.length; i++) {
+            rs[i].removeAttribute('onclick');
+        }
+    }
+    else if (symbol == 'X') {
+        document.getElementById('winner-container-item').innerHTML = 'You won'
+        board = null
+        let rs = document.getElementsByClassName('grid-item')
+        for(var i = 0; i < rs.length; i++) {
+            rs[i].removeAttribute('onclick');
+        }
+    }
+}
+```
+
 
 
 
