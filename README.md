@@ -309,4 +309,7 @@ The ```if (document.getElementById('1').innerText == 'X') {``` executes if 'X' i
 ```document.getElementById('grid-item-1').removeAttribute('onclick')``` removes the onclick attribute so the user or you can never pick it again.
 
 ```winner_finder('O')``` works the same as how it works on the ```user(number)``` function.
+<hr>
+<h1>2-Player<h2>
+</br>
 
