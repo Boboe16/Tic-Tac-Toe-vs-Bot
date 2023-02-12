@@ -312,4 +312,10 @@ The ```if (document.getElementById('1').innerText == 'X') {``` executes if 'X' i
 <hr>
 <h1>2-Player<h2>
 </br>
+The code uses HTML elements with the class "grid-item" to represent the slots in the grid and "slot" to represent the text content inside each grid item. The text content is either X or O.
 
+winner_finder() is the main function that checks for a winner. It takes a symbol (either X or O) as an argument and checks if there are three of the same symbol in a row either horizontally, vertically, or diagonally. If a winner is found, the function calls winner_finder_component() to display the winner message, then calls delete_onclicks_after_winner() to remove the onclick event from the grid items to prevent further moves.
+
+draw() is a function that checks if the game has ended in a draw, that is, all slots are filled but there is no winner. If this is the case, the function removes the onclick event from all grid items.
+
+user(number) is a function that is triggered when a player clicks on a grid item. It sets the text content of the grid item to X and removes the onclick event to prevent the same slot from being clicked again. Then it calls winner_finder() to check if X has won the game.
