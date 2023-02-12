@@ -1,5 +1,0 @@
-[[redirects]]
-
-from = "/*"
-to = "/menu.html"
-status = 200
